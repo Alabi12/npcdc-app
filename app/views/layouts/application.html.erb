@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NpcdcApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DataCaptureProject</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center ml-4">
+        <h1 class="text-xl font-bold">Nungua Presby Child Development Centre</h1>
+      </div>
+      <div class="container mx-auto flex justify-between items-center ml-4">
+        <h3 class="text-xl">Participants Status</h3>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 p-4 bg-white rounded-lg shadow-lg">
+      <%= yield %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+      <div class="container mx-auto text-center">
+        <p>&copy; <%= Date.today.year %> NunguaPresbyCDC. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

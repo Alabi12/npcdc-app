@@ -1,0 +1,2 @@
+module DataCapturingsHelper
+end

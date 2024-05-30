@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @data_capturing %>
+
+<div>
+  <%= link_to "Edit this data capturing", edit_data_capturing_path(@data_capturing) %> |
+  <%= link_to "Back to data capturings", data_capturings_path %>
+
+  <%= button_to "Destroy this data capturing", @data_capturing, method: :delete %>
+</div>

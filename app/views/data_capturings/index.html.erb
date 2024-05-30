@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Data capturings</h1>
+
+<div id="data_capturings">
+  <% @data_capturings.each do |data_capturing| %>
+    <%= render data_capturing %>
+    <p>
+      <%= link_to "Show this data capturing", data_capturing %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New data capturing", new_data_capturing_path %>
