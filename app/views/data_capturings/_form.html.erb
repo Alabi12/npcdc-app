@@ -1,6 +1,6 @@
 <%= form_with(model: data_capturing) do |form| %>
   <% if data_capturing.errors.any? %>
-    <div style="color: red">
+    <div class="text-red-500">
       <h2><%= pluralize(data_capturing.errors.count, "error") %> prohibited this data_capturing from being saved:</h2>
 
       <ul>
@@ -11,52 +11,52 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :project_number, style: "display: block" %>
-    <%= form.number_field :project_number %>
+  <div class="mb-4">
+    <%= form.label :project_number, class: "block" %>
+    <%= form.number_field :project_number, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :full_name, class: "block" %>
+    <%= form.text_area :full_name, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :age, class: "block" %>
+    <%= form.number_field :age, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :school, class: "block" %>
+    <%= form.text_area :school, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :participant_class, class: "block" %>
+    <%= form.text_area :participant_class, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :course, class: "block" %>
+    <%= form.text_area :course, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :programme, class: "block" %>
+    <%= form.text_area :programme, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :level, class: "block" %>
+    <%= form.number_field :level, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :contact_number, class: "block" %>
+    <%= form.number_field :contact_number, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
   </div>
 
   <div>
-    <%= form.label :full_name, style: "display: block" %>
-    <%= form.text_area :full_name %>
-  </div>
-
-  <div>
-    <%= form.label :age, style: "display: block" %>
-    <%= form.number_field :age %>
-  </div>
-
-  <div>
-    <%= form.label :school, style: "display: block" %>
-    <%= form.text_area :school %>
-  </div>
-
-  <div>
-    <%= form.label :participant_class, style: "display: block" %>
-    <%= form.text_area :participant_class %>
-  </div>
-
-  <div>
-    <%= form.label :course, style: "display: block" %>
-    <%= form.text_area :course %>
-  </div>
-
-  <div>
-    <%= form.label :programme, style: "display: block" %>
-    <%= form.text_area :programme %>
-  </div>
-
-  <div>
-    <%= form.label :level, style: "display: block" %>
-    <%= form.number_field :level %>
-  </div>
-
-  <div>
-    <%= form.label :contact_number, style: "display: block" %>
-    <%= form.number_field :contact_number %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: "bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:border-indigo-700 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" %>
   </div>
 <% end %>

@@ -1,15 +1,18 @@
-<!-- app/views/home/index.html.erb -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>NpcdcApp</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 </head>
 <body>
   <div class="container mx-auto px-4">
     <h1 class="text-4xl font-bold text-center mt-10">Welcome to NpcdcApp</h1>
     <p class="text-center mt-4">Your app description goes here. Use this page to navigate to other parts of your application.</p>
     <div class="text-center mt-6">
-      <a href="/your_other_path" class="text-blue-500 hover:underline">Go to another page</a>
+      <%= link_to 'Go to Data Capturing Page', data_capturings_path, class: 'text-blue-500 hover:underline' %>
     </div>
   </div>
 </body>

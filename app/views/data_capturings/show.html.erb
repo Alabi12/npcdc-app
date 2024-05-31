@@ -1,10 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-500"><%= notice %></p>
 
 <%= render @data_capturing %>
 
-<div>
-  <%= link_to "Edit this data capturing", edit_data_capturing_path(@data_capturing) %> |
-  <%= link_to "Back to data capturings", data_capturings_path %>
-
-  <%= button_to "Destroy this data capturing", @data_capturing, method: :delete %>
+<div class="mt-6">
+  <%= link_to "Edit this data capturing", edit_data_capturing_path(@data_capturing), class: "text-indigo-600 hover:underline mr-4" %>
+  <%= link_to "Back to data capturings", data_capturings_path, class: "text-indigo-600 hover:underline mr-4" %>
+  <%= button_to "Destroy this data capturing", @data_capturing, method: :delete, data: { confirm: "Are you sure?" }, class: "bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 focus:ring-opacity-50" %>
 </div>
