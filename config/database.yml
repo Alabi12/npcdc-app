@@ -1,10 +1,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
   password: wolo
-  
+  port: 5432
 
 development:
   <<: *default
@@ -15,7 +15,6 @@ test:
   database: npcdc_app_test
 
 production:
+  database: npcdc_app
   <<: *default
-  database: npcdc_app_production
-  username: postgres
-  password: wolo
+  port: 5432
