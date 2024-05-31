@@ -65,5 +65,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "tailwindcss-rails"
-  gem 'importmap-rails'
 end
