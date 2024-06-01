@@ -14,6 +14,8 @@ test:
   <<: *default
   database: npcdc_app_test
 
-production:
+ production:
   <<: *default
-  database: npcdc_app_production
+  host: 10.215.212.114
+  port: 5432
+  database: npcdc_app
