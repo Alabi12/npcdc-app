@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# exit on error
-set -o errexit
+set -e
 
-bundle install
-bundle exec rails assets:precompile
-bundle exec rails assets:clean
+# Install dependencies
+bundle install --deployment --without development test
+
+# Compile assets (if necessary)
+bundle exec rake assets:precompile
