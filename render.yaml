@@ -1,7 +1,7 @@
 databases:
   - name: postgresql
-    databaseName: postgresql
-    user: postgresql
+    databaseName: postgresql_jgd0
+    user: postgresql_jgd0_user
     plan: free
 
 services:
