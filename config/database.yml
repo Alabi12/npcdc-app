@@ -46,11 +46,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: npcdc_app_development
-  port: 5432
+  pool: 5
   username: postgres
   password: wolo
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -108,7 +110,7 @@ production:
   <<: *default
   port: 5432
   database: npcdc_app_production
-  
+
 #   production:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
