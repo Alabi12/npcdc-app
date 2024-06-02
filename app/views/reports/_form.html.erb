@@ -4,8 +4,8 @@
       <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
 
       <ul>
-        <% report.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_area :name %>
+    <%= form.text_field :name %>
   </div>
 
   <div>
@@ -28,22 +28,22 @@
 
   <div>
     <%= form.label :school, style: "display: block" %>
-    <%= form.text_area :school %>
+    <%= form.text_field :school %>
   </div>
 
   <div>
     <%= form.label :participant_class, style: "display: block" %>
-    <%= form.text_area :participant_class %>
+    <%= form.text_field :participant_class %>
   </div>
 
   <div>
     <%= form.label :course, style: "display: block" %>
-    <%= form.text_area :course %>
+    <%= form.text_field :course %>
   </div>
 
   <div>
     <%= form.label :programme, style: "display: block" %>
-    <%= form.text_area :programme %>
+    <%= form.text_field :programme %>
   </div>
 
   <div>
