@@ -1,7 +1,7 @@
 <div id="<%= dom_id report %>">
   <p>
     <strong>Project number:</strong>
-    <%= report.project_number %>
+    <%= report.try(:project_number) %>
   </p>
 
   <p>
@@ -43,5 +43,4 @@
     <strong>Contact:</strong>
     <%= report.contact %>
   </p>
-
 </div>
