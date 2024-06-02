@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_30_235440) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_02_002419) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "data_capturings", force: :cascade do |t|
+  create_table "reports", force: :cascade do |t|
     t.integer "project_number"
-    t.text "full_name"
+    t.text "name"
     t.integer "age"
     t.text "school"
     t.text "participant_class"
     t.text "course"
     t.text "programme"
     t.integer "level"
-    t.integer "contact_number"
+    t.integer "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

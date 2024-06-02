@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_number: 1
+  name: MyText
+  age: 1
+  school: MyText
+  participant_class: MyText
+  course: MyText
+  programme: MyText
+  level: 1
+  contact: 1
+
+two:
+  project_number: 1
+  name: MyText
+  age: 1
+  school: MyText
+  participant_class: MyText
+  course: MyText
+  programme: MyText
+  level: 1
+  contact: 1
