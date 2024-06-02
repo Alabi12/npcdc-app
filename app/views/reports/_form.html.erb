@@ -1,0 +1,62 @@
+<%= form_with(model: report) do |form| %>
+  <% if report.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :project_number, style: "display: block" %>
+    <%= form.number_field :project_number %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :school, style: "display: block" %>
+    <%= form.text_area :school %>
+  </div>
+
+  <div>
+    <%= form.label :participant_class, style: "display: block" %>
+    <%= form.text_area :participant_class %>
+  </div>
+
+  <div>
+    <%= form.label :course, style: "display: block" %>
+    <%= form.text_area :course %>
+  </div>
+
+  <div>
+    <%= form.label :programme, style: "display: block" %>
+    <%= form.text_area :programme %>
+  </div>
+
+  <div>
+    <%= form.label :level, style: "display: block" %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div>
+    <%= form.label :contact, style: "display: block" %>
+    <%= form.number_field :contact %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
