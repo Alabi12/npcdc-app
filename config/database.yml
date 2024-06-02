@@ -18,4 +18,4 @@ production:
   <<: *default
   host: 10.215.212.114
   port: 5432
-  database: npcdc_app
+  database: npcdc_app_production
